@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes box {
+            0% { transform: translate(0%, 0%) }
+            /* 25% { transform: translate(25%, 25%) } */
+            50% { transform: translate(50%, 50%) }
+            /* 75% { transform: translate(75%, 75%) } */
+            100% { transform: translate(100%, 100%) } 
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="anim" onclick="moverAni()" value="Animation">
+    <div id="ani">
+        <div id="mov">
+            <img src="./img/download-removebg-preview.png">
+            <!-- <h1>RAM</h1> -->
+        </div>
+    </div>
+
+    <script>
+        let btn=document.querySelector('input').style
+        btn.marginBottom='10px'
+        let s=document.getElementById('ani');
+        s.style.cssText='width:400px;height:500px; position:relative; background-color:red';
+        let mov=document.getElementById('mov')
+        function moverAni(){
+            mov.style.cssText='width: 200px;height: 250px;position: absolute;animation-name: box;animation-duration: 5s;animation-timing-function: linear;animation-delay: 0s;animation-iteration-count: 2;';
+        }
+    </script>
+</body>
+</html>

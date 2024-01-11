@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking.com</title>
+    <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+    <header class="title">
+        <img src="../img/download-removebg-preview.png"/>
+        <h1>Movie Booking</h1>
+        <div class="link-container">
+            <h3>Sign in</h3>
+            <h3>Sign up</h3>
+        </div>
+    </header>
+    <main >
+        <form class="container">
+            <h1>Book your Show</h1>
+            <label for="name">Name :</label>
+            <input type="text" placeholder="Name" id="name">
+            <br>
+            <label for="id">ID :</label>
+            <input type="number" placeholder="ID" id="id">
+            <br>
+            <label for="class">Class :</label>
+            <br>
+                <input type="radio" name="class" id="class">
+                <label for="class">I</label>
+                <input type="radio" name="class" id="class">
+                <label for="class">II</label>
+                <input type="radio" name="class" id="class">
+                <label for="class">III</label>
+            <br>
+            <label for="movies">Movies :</label>
+            <select id="movies" pla>
+                <option value="" hidden selected></option>
+                <option value="animal">ANIMAL</option>
+                <option value="chitha">CHITHA</option>
+                <option value="salar">SALAR</option>                    
+            </select>
+            <br><br>
+            <label for="snacks">Prebooked Snacks :</label>
+            <br>
+            <input type="checkbox" id="popcorn">
+            <label for="popcorn">Popcorn</label>
+            <br>
+            <input type="checkbox" id="Puffs">
+            <label for="Puffs">Puffs</label>
+            <br>
+            <input type="checkbox" id="Donuts">
+            <label for="Donuts">Donuts</label>
+            <br>
+            <input type="checkbox" id="Sprite">
+            <label for="Sprite">Sprite</label>
+            <br>
+            
+            <button type="button">Book now</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; All rights reserved.</p>
+    </footer>
+</body>
+</html>

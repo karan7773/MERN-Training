@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            border-radius: 50% 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #inner{
+            width: 250px;
+            height: 250px;
+            background-color:brown;
+            border-radius: 50% 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+    </div>
+    <div id="inner">
+    </div>
+    <script>
+        let btnc=0;
+        let c=["aqua","red","white","green","violet"];
+        let inner=document.getElementById('inner')
+        inner.addEventListener('click',()=>{
+            colorChange(inner.style)
+        })
+        let outer=document.getElementById('outer')
+        outer.addEventListener('click',()=>{
+            colorChange(outer.style)
+        })
+        function colorChange(div){
+            let color=Math.floor(Math.random()*5)
+            if (btnc===3){
+                alert("close")
+                btnc=0
+            }
+            btnc+=1
+            div.backgroundColor=c[color]
+        }
+    </script>
+</body>
+</html>
